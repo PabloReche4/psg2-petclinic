@@ -1,0 +1,30 @@
+project:
+  name: 'PSG2-2526-G6-63'
+  owner: 'L6'
+  teamId: '63'
+  identities:
+    zenhub:
+      workspaceId: '698604ae80aeba0036ccfe1f'
+  notifications:
+    email: 'mariodlinforlaffona@gmail.com,dierodfer1@alum.us.es,diego.vic.cam@gmail.com,ignfuemon@alum.us.es,pabrecgab@alum.us.es'
+  members:
+    member1:
+      name: 'Mario'
+      surname: 'Domínguez' 
+      githubUsername: 'mardomlop11'
+    member2:
+      name: 'Diego José'
+      surname: 'Rodríguez'
+      githubUsername: 'NCQ5239'
+    member3:
+      name: 'Diego'
+      surname: 'Vicente'
+      githubUsername: 'DiegoVicenteCamara'
+    member4:
+      name: 'Ignacio'
+      surname: 'Fuertes'
+      githubUsername: 'NVV3882'
+    member5:
+      name: 'Pablo'
+      surname: 'Reche'
+      githubUsername: 'PabloReche4'

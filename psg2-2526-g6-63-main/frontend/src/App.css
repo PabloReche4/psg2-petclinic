@@ -1,0 +1,95 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.NavbarBrand {
+  margin-left: 20px;
+}
+
+.consultations-table-header {
+  background-color: #d4edda; /* Light green */
+}
+
+.consultations-table-header th {
+  background-color: #d4edda; /* Ensures full coverage */
+  color: #155724;            /* Dark green text for contrast */
+  font-weight: 600;
+}
+
+.auth-button,
+.brown-cancel-visit,
+.brown-edit-visit {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: white;
+}
+.brown-add-visit {
+  background-color: #a67c52;
+}
+.brown-add-visit:hover {
+  background-color: #8c6239;
+}
+.brown-edit {
+  background-color: #8b5e3c;
+}
+.brown-edit:hover {
+  background-color: #6f4e37;
+}
+.brown-delete {
+  background-color: #5c4033;
+}
+.brown-delete:hover {
+  background-color: #3e2723;
+}
+.brown-cancel-visit {
+  background-color: #a0522d;
+}
+.brown-cancel-visit:hover {
+  background-color: #7b3f00;
+}
+.brown-edit-visit {
+  background-color: #7f5539;
+}
+.brown-edit-visit:hover {
+  background-color: #5e412f;
+}

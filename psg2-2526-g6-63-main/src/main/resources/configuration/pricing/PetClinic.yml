@@ -1,0 +1,152 @@
+saasName: PetClinic
+syntaxVersion: '3.0'
+version: "2.1.0"
+createdAt: '2026-05-14'
+currency: EUR
+features:
+  petHotel:
+    description: Acceso al Hotel de Mascotas
+    valueType: BOOLEAN
+    defaultValue: false
+    expression: pricingContext['features']['petHotel']
+    type: DOMAIN
+  adoptions:
+    description: Acceso al modulo de Adopciones
+    valueType: BOOLEAN
+    defaultValue: false
+    expression: pricingContext['features']['adoptions']
+    type: DOMAIN
+  onlineConsultations:
+    description: Acceso a las Consultas Online
+    valueType: BOOLEAN
+    defaultValue: false
+    expression: pricingContext['features']['onlineConsultations']
+    type: DOMAIN
+  supportPriority:
+    description: supportPriority description
+    valueType: TEXT
+    defaultValue: LOW
+    type: SUPPORT
+  pets:
+    description: Permiso para crear mascotas evaluando el limite
+    valueType: BOOLEAN
+    defaultValue: true
+    expression: pricingContext['features']['pets'] && subscriptionContext['maxPets'] < pricingContext['usageLimits']['maxPets']
+    serverExpression: pricingContext['features']['pets'] && subscriptionContext['maxPets'] <= pricingContext['usageLimits']['maxPets']
+    type: DOMAIN
+  visits:
+    description: Permiso para crear visitas evaluando el limite
+    valueType: BOOLEAN
+    defaultValue: true
+    expression: pricingContext['features']['visits'] && subscriptionContext['maxVisits'] < pricingContext['usageLimits']['maxVisits']
+    serverExpression: pricingContext['features']['visits'] && subscriptionContext['maxVisits'] <= pricingContext['usageLimits']['maxVisits']
+    type: DOMAIN
+  visitReminder:
+    description: Recordatorio de cita por correo electronico
+    valueType: BOOLEAN
+    defaultValue: false
+    expression: pricingContext['features']['visitReminder']
+    type: DOMAIN
+  petPicks:
+    description: Fotos de mascotas
+    valueType: BOOLEAN
+    defaultValue: false
+    expression: pricingContext['features']['petPicks']
+    type: DOMAIN
+    
+usageLimits:
+  maxPets:
+    description: Limite de mascotas registradas por dueño
+    valueType: NUMERIC
+    defaultValue: 2
+    unit: pet
+    type: NON_RENEWABLE
+    trackable: true
+    linkedFeatures:
+      - pets
+  maxVisits:
+    description: Limite de visitas mensuales por mascota
+    valueType: NUMERIC
+    defaultValue: 1
+    unit: visit
+    type: RENEWABLE
+    period:
+      value: 1
+      unit: MONTH
+    trackable: true
+    linkedFeatures:
+      - visits
+plans:
+  BASIC:
+    description: Plan Basico
+    price: 0
+    unit: user/month
+    features:
+      supportPriority:
+        value: NA
+      pets:
+        value: true
+      visits:
+        value: true
+    usageLimits:
+      maxPets:
+        value: 2
+      maxVisits:
+        value: 1
+  GOLD:
+    description: Plan Gold
+    price: 29.99
+    unit: user/month
+    features:
+      supportPriority:
+        value: MEDIUM
+      petHotel:
+        value: true
+      adoptions:
+        value: true
+      pets:
+        value: true
+      visits:
+        value: true
+    usageLimits:
+      maxPets:
+        value: 5
+      maxVisits:
+        value: 3
+  PLATINUM:
+    description: Plan Platinum
+    price: 59.99
+    unit: user/month
+    features:
+      supportPriority:
+        value: HIGH
+      petHotel:
+        value: true
+      adoptions:
+        value: true
+      onlineConsultations:
+        value: true
+      pets:
+        value: true
+      visits:
+        value: true
+    usageLimits:
+      maxPets:
+        value: 7
+      maxVisits:
+        value: 5
+addOns:
+  visitReminder:
+    description: Recordatorio de cita por correo electronico  
+    price: 15.00
+    unit: user/month
+    features:
+      visitReminder:
+        value: true
+  petPicks:
+    description: Fotos de mascotas
+    price: 10.00
+    unit: user/month
+    features:
+      petPicks:
+        value: true

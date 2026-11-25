@@ -1,0 +1,4 @@
+/* Light brown color for table headers */
+.table > thead > tr > th {
+  background-color: #A0826D;
+}

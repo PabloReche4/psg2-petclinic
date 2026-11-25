@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap");
+
+:root {
+  --pc-warm-white: #f8f7f4;
+  --pc-soft-gray: #f1f3f5;
+  --pc-clinic-green: #3fa34d;
+  --pc-text-primary: #1f2933;
+  --pc-text-secondary: #55636d;
+  --pc-card-shadow: 0 12px 24px rgba(31, 41, 51, 0.08);
+}
+
+.clinic-owner-dashboard-page {
+  background: var(--pc-warm-white);
+  color: var(--pc-text-primary);
+  font-family: "Manrope", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  min-height: calc(100vh - 64px);
+  padding: 40px 24px 72px;
+  position: relative;
+}
+
+.clinic-owner-dashboard-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at top right,
+      rgba(63, 163, 77, 0.12),
+      transparent 45%
+    ),
+    radial-gradient(circle at 15% 20%, rgba(85, 99, 109, 0.08), transparent 50%);
+  pointer-events: none;
+}
+
+.clinic-owner-dashboard-shell {
+  margin: 0 auto;
+  max-width: 1100px;
+  position: relative;
+  z-index: 1;
+}
+
+.clinic-owner-dashboard-header h1 {
+  font-family: "Playfair Display", "Georgia", serif;
+  font-size: clamp(2.2rem, 2vw + 1.6rem, 3.2rem);
+  letter-spacing: 0.5px;
+  margin: 0 0 12px;
+}
+
+.clinic-owner-eyebrow {
+  color: var(--pc-clinic-green);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.clinic-owner-subtitle {
+  color: var(--pc-text-secondary);
+  font-size: 1.05rem;
+  margin: 0 0 28px;
+  max-width: 640px;
+}
+
+.clinic-owner-intro {
+  margin: 18px 0 24px;
+}
+
+.clinic-owner-intro-title {
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.clinic-owner-intro-hint {
+  color: var(--pc-text-secondary);
+  margin: 0;
+}
+
+.clinic-owner-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.clinic-owner-card {
+  align-items: center;
+  background: var(--pc-soft-gray);
+  border-radius: 12px;
+  box-shadow: var(--pc-card-shadow);
+  display: grid;
+  gap: 16px;
+  grid-template-columns: auto 1fr;
+  padding: 18px 20px;
+}
+
+.clinic-owner-card-icon {
+  align-items: center;
+  background: rgba(63, 163, 77, 0.12);
+  border-radius: 14px;
+  color: var(--pc-clinic-green);
+  display: flex;
+  font-size: 0.85rem;
+  font-weight: 700;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  width: 48px;
+}
+
+.clinic-owner-card h2 {
+  font-size: 1.1rem;
+  margin: 0 0 4px;
+}
+
+.clinic-owner-card p {
+  color: var(--pc-text-secondary);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .clinic-owner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clinic-owner-dashboard-page {
+    padding: 32px 18px 64px;
+  }
+}

@@ -1,0 +1,74 @@
+.adoptions-page-container {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.adoptions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.adoptions-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.adoption-card,
+.application-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  background: #fff;
+}
+
+.adoption-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.adoption-card-left,
+.adoption-card-right,
+.application-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.adoption-form,
+.adoption-form-column {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.adoption-form-column {
+  flex-direction: column;
+  max-width: 700px;
+}
+
+.adoption-form select,
+.adoption-form-column textarea {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.application-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.applications-section {
+  margin-top: 2rem;
+}
